@@ -1,0 +1,28 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+{% load static %}
+<title>Chat rooms</title>
+<div class="container-fluid">
+    <br>
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>Select a Chat Room</h1>
+            <br>
+            {% for room in rooms%}
+                <button type="button" class="btn btn-primary">
+                    <a href="/room/{{room}}" style="color:white">{{room}}</a>
+                </button>
+            {% endfor %}
+            <br>
+            <br>
+            <h4>Logged in as: {{request.session.userobj}}</h4>
+            <button type="button" class="btn btn-secondary">
+                <a href="/logout/" style="color:white">Logout</a>
+            </button>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

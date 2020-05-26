@@ -1,0 +1,11 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+
+<title>User already exists</title>
+<div class="container-fluid">
+    <h1>User already exists</h1>
+    <br>
+    <button class = 'btn btn-primary' type="button"><a style="color: white" href="{% url 'signup_user' %}">Return to signup</a></button>
+</div>
+
+{% endblock %}
